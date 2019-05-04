@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25f63940-67ee-4fd3-bd61-01054af3e4b3" name="Default Changelist" comment="" />
+    <list default="true" id="25f63940-67ee-4fd3-bd61-01054af3e4b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/player_file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_max_number_of_players_calc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_players_file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/players.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/players_files/players.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,15 +20,73 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/players.txt">
+        <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_players_file_reader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="36" column="78" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+        <entry file="file://$PROJECT_DIR$/src/player_file_reader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+            <state relative-caret-position="136">
+              <caret line="8" column="103" selection-start-line="8" selection-start-column="103" selection-end-line="8" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/players_files/players.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runner.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_max_number_of_players_calc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -31,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/src/max_number_of_players_calculator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="54" />
+              <caret line="4" column="54" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -45,19 +112,31 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/max_number_of_players_calculator.py" />
+        <option value="$PROJECT_DIR$/src/file_reader.py" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/test_max_number_of_players_calc.py" />
+        <option value="$PROJECT_DIR$/resources/players_files/players.txt" />
+        <option value="$PROJECT_DIR$/spec" />
+        <option value="$PROJECT_DIR$/tests/utils.py" />
+        <option value="$PROJECT_DIR$/tests/test_players_file_reader.py" />
+        <option value="$PROJECT_DIR$/src/player_file_reader.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="75" />
+    <option name="x" value="67" />
+    <option name="y" value="35" />
     <option name="width" value="1758" />
     <option name="height" value="980" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -78,6 +157,12 @@
             <path>
               <item name="ProwlerIO" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProwlerIO" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="players_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProwlerIO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProwlerIO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -92,6 +177,12 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bwiel\PycharmProjects\ProwlerIO\resources\players_files" />
+      <recent name="C:\Users\bwiel\PycharmProjects\ProwlerIO" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -104,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Unittests in test_players_file_reader.py">
     <configuration name="Unittests in __init__.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="ProwlerIO" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,8 +210,23 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_players_file_reader.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ProwlerIO" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_players_file_reader.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in test_players_file_reader.py" />
         <item itemvalue="Python tests.Unittests in __init__.py" />
       </list>
     </recent_temporary>
@@ -139,31 +245,52 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in___init___py - 2019.05.04 at 12h 03m 22s.xml">
-      <configuration name="Unittests in __init__.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 15m 17s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in___init___py - 2019.05.04 at 12h 04m 40s.xml">
-      <configuration name="Unittests in __init__.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 17m 05s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in___init___py - 2019.05.04 at 12h 04m 57s.xml">
-      <configuration name="Unittests in __init__.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 18m 53s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 18m 55s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 19m 20s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 19m 58s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 20m 00s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 20m 02s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 20m 05s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_players_file_reader_py - 2019.05.04 at 14h 21m 36s.xml">
+      <configuration name="Unittests in test_players_file_reader.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="0" width="1406" height="784" extended-state="0" />
+    <frame x="54" y="28" width="1406" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24835646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24835646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Python Console" weight="0.3297546" />
       <window_info anchor="bottom" id="Terminal" weight="0.3297546" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297546" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297546" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3297546" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.398773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -172,24 +299,74 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="spec" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/players.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/max_number_of_players_calculator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="54" />
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+    <entry file="file://$PROJECT_DIR$/resources/players_files/text_file.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_max_number_of_players_calc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        <state relative-caret-position="304">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/players_files/players.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_players_file_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="36" column="78" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player_file_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="103" selection-start-line="8" selection-start-column="103" selection-end-line="8" selection-end-column="103" />
         </state>
       </provider>
     </entry>
