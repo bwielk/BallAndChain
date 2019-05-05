@@ -3,8 +3,8 @@ File reader
     - finds the file
     - finds the file of correct extension V
     - finds the file of correct name and correct extenstion V
-    - needs to have information
-        -if not, error message is thrown
+    - needs to have information V
+        -if not, error message is thrown V
     - needs to be of proper format
         - every player needs to have a name
             -the name has to be alphanum - non alphanumerics are not accepted

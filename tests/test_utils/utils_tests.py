@@ -1,4 +1,5 @@
 import os
+from filecmp import cmp
 
 
 def create_num_of_random_files(number, base_path, desired_extension="txt", file_name="text_file"):
@@ -24,3 +25,17 @@ def clear_the_content_of_the_desired_file(file_path):
     with open(file_path, 'w') as f:
         f.close()
 
+
+def compare_two_lists(dict1, dict2):
+    result = True
+    for k in dict1:
+        if k in dict2:
+            if sorted(dict1[k]) == sorted(dict2[k]):
+                continue
+            else:
+                result = False
+                break
+        else:
+            result = False
+            break
+    return result
