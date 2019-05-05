@@ -8,7 +8,19 @@ class PlayerFileReaderTest(unittest.TestCase):
     def setUp(self):
         self.file_reader = PlayersFileReader()
         self.path_to_players_files = '../resources/players_files/'
+        self.players_file = self.path_to_players_files + 'players.txt'
         self.content_to_write = "George, Beth,    Anne\nRick, Anne, Steph\nAnne, Beth\nSteph, George, Rick\nAlex, Bob"
+
+    def test_program_returns_an_error_message_when_players_file_exists_but_its_empty(self):
+        utils.clear_the_content_of_the_desired_file(self.players_file)
+        result = self.file_reader.read_the_content_of_the_file_and_return_it_as_list(self.players_file)
+        exp_message = '................................................................................'\
+                   '\nMAKE SURE THE FILES IN THE /resources/players_file DIRECTORY have any data in them'\
+                   '\nFollow the following format for putting data in the files'\
+                   '\nMyPlayer, OtherPlayer1, OtherPlayer2, OtherPlayer3 - names should be in alphanumerics only'\
+                   '\n...............................................................................',
+        self.assertEqual(result, exp_message)
+        utils.write_some_content_in_the_desired_file(self.players_file, self.content_to_write)
 
     def test_file_reader_detects_an_existing_text_file_with_players_config(self):
         result = self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
@@ -17,7 +29,12 @@ class PlayerFileReaderTest(unittest.TestCase):
     def test_file_reader_detects_that_in_the_dir_are_files_that_are_not_named_correctly(self):
         utils.create_num_of_random_files(10, self.path_to_players_files)
         result = self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
-        self.assertFalse(result)
+        exp_response = '................................................................................' \
+                       '\nPLEASE, DOUBLE CHECK THE NAMES AND EXTENSIONS IN THE RESOURCES DIRECTORY.' \
+                       '\nThe required documents with players details should have thee word "player" in their names' \
+                       '\nand be of .txt extension. Please correct the mistakes and rerun the program' \
+                       '\n...............................................................................',
+        self.assertEqual(result, exp_response)
         utils.delete_num_of_randomly_create_files(10, self.path_to_players_files)
 
     def test_file_reader_detects_that_in_the_players_files_dir_are_files_with_incorrect_extensions(self):
@@ -26,7 +43,12 @@ class PlayerFileReaderTest(unittest.TestCase):
         utils.create_num_of_random_files(5, self.path_to_players_files,
                                          desired_extension=desired_format, file_name=temp_file_name)
         result = self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
-        self.assertFalse(result)
+        exp_response = '................................................................................'\
+                       '\nPLEASE, DOUBLE CHECK THE NAMES AND EXTENSIONS IN THE RESOURCES DIRECTORY.'\
+                       '\nThe required documents with players details should have thee word "player" in their names'\
+                       '\nand be of .txt extension. Please correct the mistakes and rerun the program'\
+                       '\n...............................................................................',
+        self.assertEqual(result, exp_response)
         utils.delete_num_of_randomly_create_files(5, self.path_to_players_files, desired_extension=desired_format,
                                                   file_name=temp_file_name)
 
@@ -119,3 +141,13 @@ class PlayerFileReaderTest(unittest.TestCase):
         }
         comparison_result = utils.compare_two_lists(dict_of_players, expected_dict)
         self.assertTrue(comparison_result)
+
+    def test_appropriate_message_is_returned_when_desired_file_is_not_found(self):
+        absolute_path = os.path.abspath('../resources/players_files/players.txt')
+        os.remove(absolute_path)
+        result = self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
+        exp_result = '................................................................................'\
+                     '\nTHERE ARE NO FILES IN THE DESIRED DIRECTORY %s' \
+                     '\nCREATE A FILE e.g. players.txt' % self.path_to_players_files
+        self.assertEquals(result, exp_result)
+        utils.write_some_content_in_the_desired_file(self.players_file, self.content_to_write)

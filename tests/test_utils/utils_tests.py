@@ -1,5 +1,4 @@
 import os
-from filecmp import cmp
 
 
 def create_num_of_random_files(number, base_path, desired_extension="txt", file_name="text_file"):
