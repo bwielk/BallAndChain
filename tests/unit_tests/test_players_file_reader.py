@@ -7,7 +7,7 @@ class PlayerFileReaderTest(unittest.TestCase):
 
     def setUp(self):
         self.file_reader = PlayersFileReader()
-        self.path_to_players_files = '../../resources/players_files/'
+        self.path_to_players_files = '../resources/players_files/'
         self.players_file = self.path_to_players_files + 'players.txt'
         self.content_to_write = "George, Beth,    Anne\nRick, Anne, Steph\nAnne, Beth\nSteph, George, Rick\nAlex, Bob"
 
@@ -144,7 +144,7 @@ class PlayerFileReaderTest(unittest.TestCase):
         self.assertTrue(comparison_result)
 
     def test_appropriate_message_is_returned_when_desired_file_is_not_found(self):
-        absolute_path = os.path.abspath('../../resources/players_files/players.txt')
+        absolute_path = os.path.abspath('../resources/players_files/players.txt')
         os.remove(absolute_path)
         exp_result = '................................................................................'\
                      '\nTHERE ARE NO FILES IN THE DESIRED DIRECTORY %s' \

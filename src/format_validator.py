@@ -4,10 +4,11 @@ class FormatValidator:
         if all(line != '' for line in line_as_list) is True:
             return True
         else:
-            return '\n................................................................................' \
-                   '\nTHE NAME OF PLAYERS CANNOT BE BLANK! PLEASE REPLACE THE BLANK SPACES BEFORE THE FIRST COMMA' \
-                   '\nWITH A NAME TYPED IN ALPHANUMERICS e.g. StuartTheLittle, Jess1 or Phoebe112' \
-                   '\n................................................................................'
+            raise ValueError('\n................................................................................' 
+                             '\nTHE NAME OF PLAYERS CANNOT BE BLANK! PLEASE REPLACE THE BLANK SPACES '
+                             'BEFORE THE FIRST COMMA' 
+                             '\nWITH A NAME TYPED IN ALPHANUMERICS e.g. StuartTheLittle, Jess1 or Phoebe112' 
+                             '\n................................................................................')
 
     def check_the_file_does_not_contain_the_same_player_names(self, content,  dict_of_players):
         number_of_expected_lines = len(content.split('\n'))

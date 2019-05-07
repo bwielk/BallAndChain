@@ -17,12 +17,13 @@ class LineFormatValidatorTest(unittest.TestCase):
     def test_file_reader_identifies_the_names_of_the_main_players_are_blank(self):
         content = "      , Beth, Stuart\n Beth, Chris\nPaul, Chris, Beth\n\t\t           , Chris"
         content_as_list = turn_string_into_list_stripped_off_escape_expressions_and_commas(content)
-        result = self.format_validator.check_the_line_does_not_have_intentional_empty_entries(content_as_list)
         exp_result = '\n................................................................................'\
                      '\nTHE NAME OF PLAYERS CANNOT BE BLANK! PLEASE REPLACE THE BLANK SPACES BEFORE THE FIRST COMMA' \
                      '\nWITH A NAME TYPED IN ALPHANUMERICS e.g. StuartTheLittle, Jess1 or Phoebe112' \
                      '\n................................................................................'
-        self.assertEqual(result, exp_result)
+        with self.assertRaises(ValueError) as error:
+            self.format_validator.check_the_line_does_not_have_intentional_empty_entries(content_as_list)
+        self.assertEqual(str(error.exception), exp_result)
 
     def test_file_reader_identifies_the_names_of_the_name_players_are_ok(self):
         content = "\t\tPhil, Edward, Liz\nLiz, \tEdward\n\tEdward, Stephen, Phil"
@@ -35,12 +36,13 @@ class LineFormatValidatorTest(unittest.TestCase):
         clear_the_content_of_the_desired_file(self.players_file)
         write_some_content_in_the_desired_file(self.players_file, content)
         gained_dict = self.file_reader.turn_the_file_into_dict(self.players_file)
-        result = self.format_validator.check_the_file_does_not_contain_the_same_player_names(content, gained_dict)
         exp_result = '\n................................................................................'\
                      '\nTHERE CANNOT BE TWO PLAYERS WITH THE SAME NAMES' \
                      '\nCHANGE THE NAMES OF DUPLICATED PLAYERS' \
                      '\n................................................................................'
-        self.assertRai
+        with self.assertRaises(ValueError) as error:
+            self.format_validator.check_the_file_does_not_contain_the_same_player_names(content, gained_dict)
+        self.assertEqual(str(error.exception), exp_result)
 
     def test_the_validator_recognizes_if_a_dict_does_not_consist_of_players_with_similar_names(self):
         content = "Chris, Beth, Stuart\n Becky, Chris\nBeth, Chris, Beth\n\t\tStuart, Chris\nIsis, Chris, Stuart"
