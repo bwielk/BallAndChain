@@ -1,5 +1,4 @@
 import unittest
-import os
 from src.max_number_of_players_calculator import CalculatorMaxNumOfPlayersTouchingABall
 from src.format_validator import FormatValidator
 from src.player_file_reader import PlayersFileReader
