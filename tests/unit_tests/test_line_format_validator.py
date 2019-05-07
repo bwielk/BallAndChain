@@ -25,7 +25,7 @@ class LineFormatValidatorTest(unittest.TestCase):
             self.format_validator.check_the_line_does_not_have_intentional_empty_entries(content_as_list)
         self.assertEqual(str(error.exception), exp_result)
 
-    def test_file_reader_identifies_the_names_of_the_name_players_are_ok(self):
+    def test_file_reader_identifies_the_names_of_the_main_players_are_ok(self):
         content = "\t\tPhil, Edward, Liz\nLiz, \tEdward\n\tEdward, Stephen, Phil"
         content_as_list = turn_string_into_list_stripped_off_escape_expressions_and_commas(content)
         result = self.format_validator.check_the_line_does_not_have_intentional_empty_entries(content_as_list)

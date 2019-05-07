@@ -3,6 +3,9 @@ from src.format_validator import FormatValidator
 
 class PlayersFileReader:
 
+    def __init__(self):
+        self.format_validator = FormatValidator()
+
     def turn_the_file_into_dict(self, path_to_file):
 
         try:
@@ -22,7 +25,7 @@ class PlayersFileReader:
             else:
                 line_content = line.split(',')
                 edited_line_content = [el.strip() for el in line_content]
-                # FormatValidator.check_the_line_does_not_have_intentional_empty_entries(edited_line_content)
+                self.format_validator.check_the_line_does_not_have_intentional_empty_entries(edited_line_content)
                 dict_to_process[edited_line_content[0]] = edited_line_content[1:len(edited_line_content)]
         return dict_to_process
 

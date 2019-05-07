@@ -30,7 +30,6 @@ class PlayerFileReaderTest(unittest.TestCase):
 
     def test_file_reader_detects_that_in_the_dir_are_files_that_are_not_named_correctly(self):
         utils.create_num_of_random_files(10, self.path_to_players_files)
-        #result = self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
         exp_message =  '................................................................................' \
                        '\nPLEASE, DOUBLE CHECK THE NAMES AND EXTENSIONS IN THE RESOURCES DIRECTORY.' \
                        '\nThe required documents with players details should have thee word "player" in their names' \
@@ -39,7 +38,7 @@ class PlayerFileReaderTest(unittest.TestCase):
         with self.assertRaises(ValueError) as error:
             self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
         self.assertEqual(str(error.exception), exp_message)
-        utils.delete_num_of_randomly_create_files(10, self.path_to_players_files)
+        utils.delete_num_of_randomly_created_files(10, self.path_to_players_files)
 
     def test_file_reader_detects_that_in_the_players_files_dir_are_files_with_incorrect_extensions(self):
         desired_format = "csv"
@@ -54,8 +53,8 @@ class PlayerFileReaderTest(unittest.TestCase):
         with self.assertRaises(ValueError) as error:
             self.file_reader.check_the_players_files_exist_and_are_correct(self.path_to_players_files)
         self.assertEqual(str(error.exception), exp_message)
-        utils.delete_num_of_randomly_create_files(5, self.path_to_players_files, desired_extension=desired_format,
-                                                  file_name=temp_file_name)
+        utils.delete_num_of_randomly_created_files(5, self.path_to_players_files, desired_extension=desired_format,
+                                                   file_name=temp_file_name)
 
     def test_file_reader_realises_the_players_file_is_empty_and_returns_appropriate_message(self):
         players_txt_file = self.path_to_players_files + 'players.txt'
