@@ -6,7 +6,7 @@ class CalculatorMaxNumOfPlayersTouchingABall:
     file_to_read = None
 
     def __init__(self):
-        self.file_to_read = './/resources//players_files//players.txt'
+        self.file_to_read = '../resources/players_files/players.txt'
 
 
     def calculate_max_number_of_players_touching_a_ball(self, file=file_to_read):
@@ -15,7 +15,7 @@ class CalculatorMaxNumOfPlayersTouchingABall:
         format_validator = FormatValidator()
         dict_of_players = file_reader.turn_the_file_into_dict(file)
         content = None
-        with open(self.file_to_read, 'r') as f:
+        with open(file, 'r') as f:
             content = f.read()
         format_validator.check_the_file_does_not_contain_the_same_player_names(content, dict_of_players)
         for k in dict_of_players.keys():
